@@ -18,21 +18,25 @@ function Card({cart,setCart,product}) {
                   <div className="bi-star-fill"></div>
               </div>
               </>):("")}
-              {product.orginal?(<>
-                <div><span className="text-muted text-decoration-line-through">{product.originalPrice}</span>
-                {product.price}</div>
-              </>):(product.price)
-              }
+              {product.original ? (
+  <div>
+    <span className="text-muted text-decoration-line-through">{product.originalPrice}</span>
+      {product.price}
+  </div>
+) : (
+  product.price
+)}
+
           </div>
       </div>
       <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                                 <div className="text-center">
                                     {
-                                        outCart?<button className="btn btn-outline-dark mt-auto" href="#" onClick={()=>{
+                                        outCart?<button className="btn btn-outline-success mt-auto" href="#" onClick={()=>{
                                             setCart(cart+1);
                                             setOutCart(false);
                                         }}>Add to Cart</button>:
-                                        <button className="btn btn-outline-dark mt-auto" href="#" onClick={()=>{
+                                        <button className="btn btn-outline-danger mt-auto" href="#" onClick={()=>{
                                             setCart(cart-1);
                                             setOutCart(true);
                                         }}>Remove from cart</button>

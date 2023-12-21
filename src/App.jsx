@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import TopBar from './components/TopBar'
 import Header from './components/Header'
 import Card from './components/Card'
+import Footer from './components/Footer'
 
 function App() {
   let [cart,setCart]=useState(0)
@@ -12,12 +13,12 @@ function App() {
     sale: false,
     originalPrice: "",
     original: false,
-    reviews: true,
+    reviews: false,
   },
   {
     name: 'Special Item',
     image: 'https://dummyimage.com/450x300/dee2e6/6c757d.jpg',
-    price: '$18.00',
+    price: ' $18.00',
     sale: true,
     originalPrice: '$20.00',
     original: true,
@@ -45,7 +46,7 @@ function App() {
   {
     name: 'Sale Item',
     image: 'https://dummyimage.com/450x300/dee2e6/6c757d.jpg',
-    price: '$25.00',
+    price: ' $25.00',
     sale: true,
     originalPrice: '$50.00',
     original: true,
@@ -54,7 +55,7 @@ function App() {
   {
     name: 'Fancy Product',
     image: 'https://dummyimage.com/450x300/dee2e6/6c757d.jpg',
-    price: '$120.00',
+    price: ' $120.00',
     sale: false,
     originalPrice: '$280.00',
     original: true,
@@ -63,7 +64,7 @@ function App() {
   {
     name: 'Special Item',
     image: 'https://dummyimage.com/450x300/dee2e6/6c757d.jpg',
-    price: '$18.00',
+    price: ' $18.00',
     sale: true,
     originalPrice: '$20.00',
     original: true,
@@ -72,7 +73,7 @@ function App() {
   {
     name: 'Special Item',
     image: 'https://dummyimage.com/450x300/dee2e6/6c757d.jpg',
-    price: '$40.00',
+    price: ' $20.00',
     sale: false,
     originalPrice: '',
     original: false,
@@ -94,7 +95,8 @@ function App() {
 
                     </div>
               </div>
-</section>              
+</section>
+<Footer cart={cart} setCart={setCart}/>              
   </>
 }
 
